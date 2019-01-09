@@ -7,15 +7,15 @@
   public void baslangic()
     {
         tutulanlar=new Integer[100];
-        lmB.removeAllElements();
-        lmI.removeAllElements();
+        lmb.removeAllElements();
+        lmi.removeAllElements();
         btnOyunaBasla.setEnabled(true);
-        btnInsan.setEnabled(false);
-        txtInsan.setEditable(false);
+        btnonayla.setEnabled(false);
+        txtinsan.setEditable(false);
         
         this.setResizable(false);
-        lmB.addElement("Bilgisayar");        
-        lmI.addElement("İnsan");
+        lmb.addElement("Bilgisayar");        
+        lmi.addElement("İnsan");
         listbilgisayar.setModel(lmb);
         listinsan.setModel(lmi);
     }
