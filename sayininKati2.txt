@@ -1,7 +1,7 @@
   public  Integer[] tutulanlar;
     public int bilgisayar=1,insan,sira=0;
-    DefaultListModel lmB=new DefaultListModel();
-    DefaultListModel lmI=new DefaultListModel();
+    DefaultListModel lmb=new DefaultListModel();
+    DefaultListModel lmi=new DefaultListModel();
 
 ---------------------------------------------------------
   public void baslangic()
@@ -16,8 +16,8 @@
         this.setResizable(false);
         lmB.addElement("Bilgisayar");        
         lmI.addElement("İnsan");
-        listBilgisayar.setModel(lmB);
-        listInsan.setModel(lmI);
+        listbilgisayar.setModel(lmb);
+        listinsan.setModel(lmi);
     }
 --------------------------------------------------------
  public  int sayiVarMi(int sayi)
@@ -40,8 +40,8 @@ public void bilgisayarSayiTutsun()
         if(sayiVarMi(insan)==0)
         {  
             JOptionPane.showMessageDialog(this, "Tebrikler oyunu sen kazandın:");
-            btnOyunaBasla.setEnabled(true);
-            btnOyunaBasla.setText("tekrar oyna");
+            btnoyunubaslat.setEnabled(true);
+            btnoyunubaslat.setText("tekrar oyna");
             return ;
         }
         if(sayiVarMi(insan)>1)
@@ -55,13 +55,13 @@ public void bilgisayarSayiTutsun()
                 {
                     bilgisayar=i;
                     tutulanlar[sira]=bilgisayar;
-                    lmB.addElement(bilgisayar);
+                    lmb.addElement(bilgisayar);
                     sira++; 
                     if(sayiVarMi(bilgisayar)==0)
                     {  
                         JOptionPane.showMessageDialog(this, bilgisayar+" Sayısını tutarak Oyunu ben kazandım:");
-                        btnOyunaBasla.setEnabled(true);
-                        btnOyunaBasla.setText("tekrar oyna");                   
+                        btnoyunubaslat.setEnabled(true);
+                        btnoyunubaslat.setText("tekrar oyna");                   
                         return ;
                     }
                     else
@@ -76,7 +76,7 @@ public void bilgisayarSayiTutsun()
         {
             bilgisayar=1;
             tutulanlar[sira]=bilgisayar;
-            lmB.addElement(bilgisayar);
+            lmb.addElement(bilgisayar);
             sira++; 
             JOptionPane.showMessageDialog(this, bilgisayar+" Sayısını tuttum sıra sende:");              
             
@@ -93,12 +93,12 @@ public void bilgisayarSayiTutsun()
         {
             bilgisayar=r.nextInt(100)+1;
         }
-        lmB.addElement(bilgisayar);
+        lmb.addElement(bilgisayar);
         tutulanlar[sira]=bilgisayar;
         sira++;
-        btnOyunaBasla.setEnabled(false);
-        btnInsan.setEnabled(true);
-        txtInsan.setEditable(true);
+        btnoyunubaslat.setEnabled(false);
+        btnonayla.setEnabled(true);
+        txtinsan.setEditable(true);
         JOptionPane.showMessageDialog(this, bilgisayar+" Sayısını tuttum sıra sende:");
       
         
